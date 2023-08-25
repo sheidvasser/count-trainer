@@ -1,0 +1,110 @@
+:root {
+    --default-black: #111111;
+    --medium-black: #202020;
+    --light-black: #969696;
+    --white: #f3f3f3;
+    --blue: #006bc9;
+}
+body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--medium-black);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--medium-black);
+    color: var(--light-black);
+    font-size: 16px;
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+}
+.emphasized {
+    color: var(--white);
+}
+section {
+    margin-top: 40px;
+}
+.inputs__wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+input {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--light-black);
+    outline: none;
+    color: var(--white);
+    margin: 10px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::placeholder {
+    color: var(--light-black);
+}
+input:focus {
+    border: 1px solid var(--blue);
+}
+select {
+    border: 1px solid var(--light-black);
+    border-radius: 6px;
+    padding: 10px 14px;
+    outline: none;
+    position: relative;
+    margin: 10px;
+}
+select option {
+    position: absolute;
+    background-color: var(--default-black);
+    top: 100%;
+    left: 50%;
+    z-index: 2;
+}
+.button-wrapper, .submit {
+    display: flex;
+    justify-content: center;
+}
+button {
+    text-transform: capitalize;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--light-black);
+    cursor: pointer;
+}
+button:hover {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+.tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.submit {
+    margin-bottom: 30px;
+}
+footer {
+    padding: 20px 10px;
+}
+@media (max-width: 900px) {
+    .inputs__wrapper {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 550px) {
+    .inputs__wrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
